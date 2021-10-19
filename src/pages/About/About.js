@@ -17,7 +17,7 @@ const About = () => {
                 </div>
             </div>
 
-            <Container>
+            <Container className='mb-5'>
                 <Row className="g-2">
                     <Col lg="6" md='12' className="border border-secondary">
                         <Faq></Faq>

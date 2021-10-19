@@ -1,6 +1,5 @@
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword } from "firebase/auth";
 import { useEffect, useState } from "react";
-import { useHistory } from "react-router";
 import initFirebase from "../pages/Login/firebase/firebase.init";
 
 initFirebase();

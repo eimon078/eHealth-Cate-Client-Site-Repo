@@ -31,7 +31,7 @@ const Faq = () => {
                             Your consultation will be absolutely safe. Tata Health platform is absolutely safe & private where our customer's information and health data is the most important thing for us.
                         </Accordion.Body>
                     </Accordion.Item>
-                    <Accordion.Item eventKey="3">
+                    <Accordion.Item eventKey="4">
                         <Accordion.Header>Can I consult an online doctor for emergencies?</Accordion.Header>
                         <Accordion.Body>
                             In case of emergencies, it is recommended that you visit the nearest hospital for immediate medical intervention. Tata Health doctors will be unable to help with cases that need immediate intensive care.
