@@ -66,7 +66,7 @@ const Login = () => {
     return (
         <div>
             {
-                checked ? <div> resister form
+                checked ? <div>
                     <h2 className="mt-5 mb-3">Please register</h2>
                     <h3 className="text-danger">{passwordError}</h3>
                     <Container>
