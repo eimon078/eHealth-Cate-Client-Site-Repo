@@ -24,7 +24,7 @@ const Appointment = () => {
                         </Col>
                         <Col lg="4">
                             <Form.Label>Make an Appointment</Form.Label>
-                            <Form.Control type='date' placeholder="Make an Appointment" onfocus="(this.type=date)" />
+                            <Form.Control type='date' placeholder="Make an Appointment" />
                         </Col>
                     </Row>
                     <Row className="justify-content-center">

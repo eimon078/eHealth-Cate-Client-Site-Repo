@@ -1,7 +1,9 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Footer.css'
+import { faMobile, faEnvelope, faLocationArrow } from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => {
     return (
@@ -28,9 +30,9 @@ const Footer = () => {
                     <Col>
                         <h4>Contact Us</h4>
                         <div>
-                            <p className="mb-0">+880 123-456-7890</p>
-                            <p className="mb-0">example@gmail.com</p>
-                            <p className="mb-0">Lakshmipur Sadar, Lakshmipur</p>
+                            <p className="mb-0"><span className="text-primary p-1"><FontAwesomeIcon icon={faMobile} /></span>+880 123-456-7890</p>
+                            <p className="mb-0"><span className="text-primary p-1"><FontAwesomeIcon icon={faEnvelope} /></span> example@gmail.com</p>
+                            <p className="mb-0"><span className="text-primary p-1"><FontAwesomeIcon icon={faLocationArrow} /></span> Lakshmipur Sadar, Lakshmipur</p>
                         </div>
                     </Col>
                 </Row>

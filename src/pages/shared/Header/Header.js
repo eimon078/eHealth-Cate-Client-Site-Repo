@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Nav, Navbar, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const Header = () => {
-    const { user, googleSignOut } = useAuth()
-    console.log(user.displayName);
+    const { user, googleSignOut, userName } = useAuth()
+
     return (
         <>
             <Navbar collapseOnSelect expand="lg" sticky="top" bg="dark" variant="dark">
@@ -20,7 +20,7 @@ const Header = () => {
                             user.email ? <Button size='sm' className="me-2" onClick={googleSignOut}>Log Out</Button> : <Nav.Link as={Link} to="/login">Login</Nav.Link>
                         }
                         <Navbar.Text>
-                            {user.displayName && <span>{user.displayName}</span>}
+                            {userName && <span>{userName}</span>}
                         </Navbar.Text>
                     </Navbar.Collapse>
                 </Container>

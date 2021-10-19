@@ -21,7 +21,6 @@ const TopHome = () => {
                     />
                     <Carousel.Caption className="top-50 text-black fw-bolder opacity-75">
                         <h1 className="fs-1">We are here For Your Care</h1>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -33,7 +32,6 @@ const TopHome = () => {
                     />
                     <Carousel.Caption className="top-50 text-black fw-bolder opacity-75">
                         <h5 className="fs-1">Create a strong and lasting first impression with our paitents</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -45,7 +43,6 @@ const TopHome = () => {
                     />
                     <Carousel.Caption className="top-50 text-black fw-bolder opacity-75">
                         <h5 className="fs-1">eHelath Care ensures a fantastic experience</h5>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

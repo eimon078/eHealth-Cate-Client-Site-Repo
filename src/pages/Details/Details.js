@@ -5,7 +5,6 @@ import useServices from '../../hooks/useServices';
 
 const Details = () => {
     const services = useServices()
-    console.log(services);
     const [details, setDetails] = useState({})
     const { detailsId } = useParams();
 

@@ -8,6 +8,7 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     const [error, setError] = useState("");
     const [isLoading, setIsLoading] = useState(true);
+    const [userName, setUserName] = useState('');
 
 
     const GoogleProvider = new GoogleAuthProvider();
@@ -27,9 +28,8 @@ const useFirebase = () => {
         setIsLoading(true);
         signOut(auth)
             .then(() => {
-                console.log(user)
                 setUser({});
-                console.log(user)
+                setUserName('');
             })
             .finally(() => {
                 setIsLoading(false)
@@ -43,10 +43,11 @@ const useFirebase = () => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
-                console.log(user);
+                setUserName(user?.displayName)
             }
             else {
                 setUser({});
+                setUserName('');
             }
             setIsLoading(false)
         })
@@ -54,14 +55,14 @@ const useFirebase = () => {
 
     // Create User 
 
-    const createUserWithEmailPassword = (email, password, name, redirect) => {
-        console.log(redirect, name);
+    const createUserWithEmailPassword = (email, password, name) => {
         setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password,)
             .then(res => {
                 updateProfile(auth.currentUser, { displayName: name })
                     .then(() => {
                         setUser(res.user);
+                        setUserName(name);
                     });
             })
             .catch(error => {
@@ -79,13 +80,8 @@ const useFirebase = () => {
 
     const signInUserWithEmailPassword = (email, password) => {
         setIsLoading(false);
-        signInWithEmailAndPassword(auth, email, password)
-            .then(res => {
-                setUser(res.user);
-            })
-            .finally(() => {
-                setIsLoading(false)
-            })
+        return signInWithEmailAndPassword(auth, email, password)
+
     }
 
     return {
@@ -99,6 +95,7 @@ const useFirebase = () => {
         signInUserWithEmailPassword,
         isLoading,
         setIsLoading,
+        userName
     }
 }
 
